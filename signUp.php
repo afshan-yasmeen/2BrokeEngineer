@@ -8,8 +8,8 @@ $username=$_POST['username'];
 $password=$_POST['password'];
 echo `$username`;
 
+include "./connection/db.php";
 // Database Connection 
-$conn=new mysqli('localhost','root','','resturantly');
 if($conn->connect_error){
     die('Connection Failed'.$conn->connect_error );
 }
