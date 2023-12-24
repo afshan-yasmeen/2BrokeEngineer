@@ -11,6 +11,7 @@ echo `$username`;
 include "./connection/db.php";
 // Database Connection 
 if($conn->connect_error){
+  echo "Connection failed ". $conn->connect_error;
     die('Connection Failed'.$conn->connect_error );
 }
 else{
