@@ -3,10 +3,10 @@ set_error_handler(function ($errno, $errstr, $errfile, $errline) {
     throw new ErrorException($errstr, $errno, 0, $errfile, $errline);
 });
 $error_message_alert = "";
-define('DBNAME', 'broke');
-define('DBHOST', 'localhost');
-define('DBPASS', '');
-define('DBUSER', 'root');
+define('DBNAME', '2BrokeEngineerDatabase');
+define('DBHOST', 'tcp:mahpara-afshan-mehro.database.windows.net,1433');
+define('DBPASS', 'Afshan@123456789');
+define('DBUSER', 'CloudSA26407d6b');
 try {
     $connect = new PDO('mysql:host=' . DBHOST . ';dbname=' . DBNAME, DBUSER, DBPASS);
     $sql = new mysqli(DBHOST, DBUSER, DBPASS, DBNAME);
