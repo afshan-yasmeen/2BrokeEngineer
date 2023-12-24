@@ -3,6 +3,7 @@
 <html lang="en">
 
 <?php
+  echo "Insert success 1";
 if(isset($_POST['username'])){
 $username=$_POST['username'];
 $password=$_POST['password'];
