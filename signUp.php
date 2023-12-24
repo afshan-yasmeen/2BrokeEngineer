@@ -13,11 +13,10 @@ if (isset($_POST["register"])) {
     'password' => $user_encrypted_password,
   );
   $username_count = count_records('signup', '', array("username" => "$username"));
-
   if ($username_count > 0) {
     $result[] = "Username is already exist";
-  }else{
-  $result = insert('signup', $register_user_data, [], 'Successfully Register');
+  } else {
+    $result = insert('signup', $register_user_data, [], 'Successfully Register');
   }
   $alert = '';
   $alert_message = '';
@@ -36,13 +35,11 @@ if (isset($_POST["register"])) {
 ?>
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <title>CodePen - Animated Login Form using Html &amp; CSS Only</title>
   <link rel="stylesheet" href="./assets/css/signIn.css">
 </head>
-
 <body> <!-- partial:index.partial.php -->
   <section> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
     <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span>
@@ -98,5 +95,4 @@ if (isset($_POST["register"])) {
     </div>
   </section> <!-- partial -->
 </body>
-
 </html>

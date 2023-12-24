@@ -25,18 +25,18 @@ if (isset($_POST["login"])) {
   }
   if (is_array($result)) {
     foreach ($result as $error) {
-        if (is_array($error)) {
-            $alert_message .= array_to_string($error) . '<br>';
-        } else {
-            $alert_message .= $error . '<br>';
-        }
-        $alert = 'danger';
+      if (is_array($error)) {
+        $alert_message .= array_to_string($error) . '<br>';
+      } else {
+        $alert_message .= $error . '<br>';
+      }
+      $alert = 'danger';
     }
-} else {
+  } else {
     $alert = 'success';
     $alert_message = $result;
-}
-$attempt_alert =  "<div class='alert alert-$alert' style='text-align:center;  background-color:green;'>$alert_message</div>";
+  }
+  $attempt_alert =  "<div class='alert alert-$alert' style='text-align:center;  background-color:green;'>$alert_message</div>";
 }
 ?>
 <!doctype html>
@@ -52,7 +52,7 @@ $attempt_alert =  "<div class='alert alert-$alert' style='text-align:center;  ba
       <div class="content">
         <h2>Sign In</h2>
         <form class="form" action="" method="post">
-        <?= $attempt_alert; ?>
+          <?= $attempt_alert; ?>
           <div class="inputBox">
             <input type="text" name="username" required> <i>Username</i>
           </div>
