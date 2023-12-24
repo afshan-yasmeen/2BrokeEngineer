@@ -17,4 +17,3 @@ $connectionInfo = array("UID" => "CloudSA26407d6b", "pwd" => "{your_password_her
 $serverName = "tcp:mahpara-afshan-mehro.database.windows.net,1433";
 $conn = sqlsrv_connect($serverName, $connectionInfo);
 ?>
-?>
