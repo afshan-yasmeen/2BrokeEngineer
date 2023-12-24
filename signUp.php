@@ -3,6 +3,7 @@
 <html lang="en">
 
 <?php
+if(isset($_POST['username'])){
 $username=$_POST['username'];
 $password=$_POST['password'];
 echo `$username`;
@@ -16,9 +17,10 @@ else{
     $stmt=$conn->prepare("insert into signUp(username,password ) values(?,?)");
     $stmt->bind_param("ss",$username,$password);
     $stmt->execute();
-    header("Location: /signIn.html");
+    header("Location: ./signIn.html");
     $stmt->close();
     $conn->close();
+}
 }
 ?>
 <head>
