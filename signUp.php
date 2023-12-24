@@ -4,12 +4,17 @@
 
 <?php
   echo "Insert success 1";
+  include "./connection/db.php";
+  if($conn->connect_error){
+    echo "Connection failed ". $conn->connect_error;
+      die('Connection Failed'.$conn->connect_error );
+  }
 if(isset($_POST['username'])){
 $username=$_POST['username'];
 $password=$_POST['password'];
 echo `$username`;
 
-include "./connection/db.php";
+
 // Database Connection 
 if($conn->connect_error){
   echo "Connection failed ". $conn->connect_error;
