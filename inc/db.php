@@ -4,7 +4,8 @@ set_error_handler(function ($errno, $errstr, $errfile, $errline) {
 });
 $error_message_alert = "";
 define('DBNAME', '2BrokeEngineerDatabase');
-define('DBHOST', 'tcp:mahpara-afshan-mehro.database.windows.net,1433');
+define('DBHOST', 'mahpara-afshan-mehro.database.windows.net');
+//sqlsrv:server = tcp:mahpara-afshan-mehro.database.windows.net,1433
 define('DBPASS', 'Afshan@123456789');
 define('DBUSER', 'CloudSA26407d6b');
 try {
